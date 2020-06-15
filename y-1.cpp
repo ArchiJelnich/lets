@@ -8,8 +8,10 @@ using namespace std;
 int main()
 {
 
-    string S = "eto moya stroka";
-    string C = "ego moya eschoodnaw";
+    string S;
+    string C;
+
+    cin >> S >> C;
 
     set <char> gems;
     int stones = 0;
@@ -21,29 +23,27 @@ int main()
 
     set <char> :: iterator it = gems.begin();
 
- /*   for (int i = 0; i < gems.size(); i++)
+    /*   for (int i = 0; i < gems.size(); i++)
+       {
+           cout << *it << endl;
+           it++;
+       }
+     */
+
+    for (int i = 0; i < C.size(); i++)
     {
-        cout << *it << endl;
-        it++;
+        if (gems.find(C[i]) != gems.end()) {
+
+            stones ++;
+        }
+
+
     }
 
-  */
 
- for (int i = 0; i < C.size(); i++)
- {
-     if (gems.find(C[i]) != gems.end()) {
+    cout << stones;
 
-         stones ++;
-         cout << C[i] << endl;
-     }
-
-
- }
-
-
-
-
-return 0;
+    return 0;
 
 
 
